@@ -60,35 +60,40 @@ body#static_pages.index {
 
   nav {
     background: #e67077;
-    height: 5em;
+    position: relative;
     ul {
-      margin: 0;
-      padding: 1em 1em;
+      margin: 0em auto;
+      padding: 0em 2em;
+      float: right;
       @include for-screens-less-than($screen-target-width-1) {
           text-align: center;
       }
       li {
         color: #481013;
+        font-size: 18px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 0em 0.5em;
+        line-height: 60px;
+        text-transform: uppercase;
         &:nth-of-type(1) {
-          font-size: 150%;
+          position: absolute;
+          left: 0px;
+          font-size: 24px;
           font-weight: 600;
           font-style: italic;
-          padding: 1em 3em 0em 1em;
+          margin-left: 0.75em;
           @include for-screens-less-than($screen-target-width-2) {
-            padding: 1em 1em 0em 1em;
-            font-size: 120%;
+            font-size: 20px;
           }
           @include for-screens-less-than($screen-target-width-1) {
             display: none;
           }
         }
-        font-size: 110%;
-        font-weight: 700;
-        display: inline-block;
-        padding: 0.5em 0.5em;
-        text-transform: uppercase;
       }
-      
+    }
+    &:after {
+      @include clearfix;
     }
   }
 

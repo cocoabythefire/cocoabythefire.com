@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Crafty+Girls|Droid+Sans:400,700|Lato:300,400,700,900,300italic,400italic,700italic,900italic|Arvo:400,700,400italic,700italic|Playfair+Display:400,700,900,400italic,700italic|Lora:400,700,400italic,700italic|Droid+Serif:400,700,400italic,700italic|Noticia+Text:400,700,700italic,400italic|Open+Sans:400italic,600italic,700italic,400,600,700|Roboto:400,300,300italic,400italic,500,500italic,700,700italic|Oxygen:400,700|Montserrat:400,700|Merriweather:400,400italic,700,700italic,900,900italic|Special+Elite|Luckiest+Guy|Bree+Serif|Patua+One|Archivo+Black|Amaranth:400,400italic,700,700italic);
+
+body{
+  margin: 0;
+}
+
+body#static_pages.index {
+  background-color: red;
+
+  section.header {
+    // TODO: background size needs to be adjusted
+    // for small screen sizes when browser doesn't support cover
+    background: image-url("cocoa.jpg");
+    background-position: center;
+    background-size: 100% auto;
+    background-size: cover;
+    color: white;
+    padding: 4em 6em;
+
+    h1{
+      font-family: 'Amaranth', sans-serif;
+      font-size: 300%;
+      letter-spacing: 0.03em;
+      word-spacing: -0.1em;
+      text-transform: lowercase;
+      font-weight: 400;
+      span {
+        font-size:60%;
+        word-spacing: -0.2em;
+      }
+    }
+  }
+}

@@ -1,13 +1,25 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700|Amaranth:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Amaranth:400,400italic,700,700italic|Rock+Salt);
 @import "constants.scss";
 @import "mixins.scss";
+
+// TODO: remove unused fonts
 
 body {
   margin: 0;
   font-family: 'Open Sans';
+  font-size: 110%;
 }
 
 body#static_pages.index {
+  & > section {
+    h1 {
+      margin: 0;
+      font-size: 200%;
+    }
+    p {
+      line-height: 1.4em;
+    }
+  }
   section.header {
     // TODO: background size needs to be adjusted
     // for small screen sizes when browser doesn't support cover
@@ -23,7 +35,6 @@ body#static_pages.index {
       word-spacing: -0.1em;
       text-transform: lowercase;
       font-weight: 400;
-      margin: 0;
       text-align: center;
       padding: 1em 0.5em;
       text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
@@ -45,21 +56,89 @@ body#static_pages.index {
   }
 
   section.description {
-    padding: 1em 8em;
+    padding: 3em 8em;
     background: #e64c55 image-url("rose.png");
     text-transform: uppercase;
     text-align: center;
     h1 { display: none; }
     p:nth-of-type(1) {
-      font-size: 250%;
-      font-weight: 600;
+      font-size: 200%;
+      font-weight: 300;
       letter-spacing: -0.05em;
       color: #481013;
+    }
+    p {
+      margin:0.5em;
+      font-size: 90%;
+    }
+  }
+
+  section.story {
+    background: #190609;
+    color: white;
+    padding: 4em 6em;
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.2em;
+    }
+    p {
+      font-weight: 200;
+      font-size: 95%;
+    }
+    img {
+      float: left;
+      height: 13em;
+      border: 8px solid white;
+      margin: 1em 1.5em 1em 0em;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+    }
+  }
+
+  section.favs {
+    background: #ff6a73 image-url("pink_polyester.png");
+    padding: 4em 6em;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  section.art {
+    background: white image-url("dots.png");;
+    padding: 4em 6em;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  section.photos {
+    background: black image-url("dark.png");
+    color: white;
+    padding: 4em 6em;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  section.contact {
+    background: #ff6a73 image-url("pink_polyester.png");
+    padding: 4em 6em;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
     }
   }
 
   nav {
-    background: #e67077;
+    background: #ff6a73;
     position: relative;
     ul {
       margin: 0em auto;
@@ -69,22 +148,29 @@ body#static_pages.index {
           text-align: center;
       }
       li {
-        color: #481013;
+        // color: #481013;
+        color: #190609;
         font-size: 18px;
         font-weight: 700;
         display: inline-block;
         padding: 0em 0.5em;
         line-height: 60px;
         text-transform: uppercase;
+        opacity: 0.85;
+        @include for-screens-less-than($screen-target-width-2) {
+          font-size: 16px;
+        }
         &:nth-of-type(1) {
           position: absolute;
           left: 0px;
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
           font-style: italic;
           margin-left: 0.75em;
+          text-transform: lowercase;
+          font-family: 'Rock Salt', cursive;
           @include for-screens-less-than($screen-target-width-2) {
-            font-size: 20px;
+            font-size: 18px;
           }
           @include for-screens-less-than($screen-target-width-1) {
             display: none;
@@ -96,6 +182,15 @@ body#static_pages.index {
       @include clearfix;
     }
   }
+}
 
-
+footer {
+  background: #eb3b4c;
+  color: black;
+  text-transform: uppercase;
+  p {
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+  }
 }

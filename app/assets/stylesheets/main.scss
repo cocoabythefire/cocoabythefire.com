@@ -63,7 +63,7 @@ body#static_pages.index {
     h1 { display: none; }
     p:nth-of-type(1) {
       font-size: 200%;
-      font-weight: 300;
+      font-weight: 600;
       letter-spacing: -0.05em;
       color: #481013;
     }
@@ -104,6 +104,26 @@ body#static_pages.index {
       text-transform: uppercase;
       letter-spacing: 0.2em;
     }
+    p {
+      padding-bottom: 2em;
+    }
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        padding: 0em 1em 1em 0em;
+        width: 48%;
+        text-align: left;
+        span {
+          color: #eb3b4c;
+          font-weight: 600;
+          font-style: italic;
+        }
+      }
+    }
+    &:after {
+      @include clearfix;
+    }
   }
 
   section.art {
@@ -113,6 +133,12 @@ body#static_pages.index {
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.2em;
+    }
+    img {
+      height: 300px;
+      border-radius: 4px;
+      border: 4px solid #aaa;
+      margin: 1em;
     }
   }
 

@@ -44,6 +44,8 @@ body#static_pages.index {
       }
     }
     &:before {
+      // This is the lace at the top of the page and always
+      // layered on top of everything
       background: image-url("polyester.png");
       opacity: 0.8;
       display: block;
@@ -52,6 +54,7 @@ body#static_pages.index {
       content: "";
       position: fixed;
       box-shadow: 0px 0px 3px rgba(0,0,0,0.7);
+      z-index: 999;
     }
   }
 
@@ -211,6 +214,11 @@ body#static_pages.index {
           }
         }
       }
+    }
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      top: 0;
     }
     &:after {
       @include clearfix;

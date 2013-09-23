@@ -2,6 +2,12 @@
 @import "constants.scss";
 @import "mixins.scss";
 
+$dark-brown: #302823;
+$coral: #FF5559;
+$dark-coral: #D42438;
+$turquoise: #60BAA4;
+$pale-green: #FAF2B7;
+
 // TODO: remove unused fonts
 
 body {
@@ -43,32 +49,19 @@ body#static_pages.index {
         word-spacing: -0.2em;
       }
     }
-    &:before {
-      // This is the lace at the top of the page and always
-      // layered on top of everything
-      background: image-url("polyester.png");
-      opacity: 0.8;
-      display: block;
-      height: 20px;
-      width: 100%;
-      content: "";
-      position: fixed;
-      box-shadow: 0px 0px 3px rgba(0,0,0,0.7);
-      z-index: 999;
-    }
   }
 
   section.description {
     padding: 3em 8em;
-    background: #e64c55 image-url("rose.png");
+    background: $dark-coral image-url("rose.png");
     text-transform: uppercase;
     text-align: center;
+    color: $dark-brown;
     h1 { display: none; }
     p:nth-of-type(1) {
       font-size: 200%;
       font-weight: 600;
       letter-spacing: -0.05em;
-      color: #481013;
     }
     p {
       margin:0.5em;
@@ -77,9 +70,9 @@ body#static_pages.index {
   }
 
   section.story {
-    background: #190609;
+    background: darken($dark-brown, 5%);
     color: white;
-    padding: 4em 6em;
+    padding: 7em 6em 4em 6em;
     h1 {
       text-transform: uppercase;
       text-align: center;
@@ -100,9 +93,10 @@ body#static_pages.index {
   }
 
   section.favs {
-    background: #ff6a73 image-url("pink_polyester.png");
+    background: $pale-green image-url("polyester.png");
     padding: 4em 6em;
     text-align: center;
+    color: $dark-brown;
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.2em;
@@ -123,7 +117,7 @@ body#static_pages.index {
         -moz-box-sizing: border-box;
         text-align: left;
         strong {
-          color: #eb3b4c;
+          color: $dark-coral;
           text-transform: lowercase;
           display: block;
           font-weight: 600;
@@ -165,9 +159,10 @@ body#static_pages.index {
   }
 
   section.contact {
-    background: #ff6a73 image-url("pink_polyester.png");
+    background: $pale-green image-url("polyester.png");
     padding: 4em 6em;
     text-align: center;
+    color: $dark-brown;
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.2em;
@@ -175,8 +170,9 @@ body#static_pages.index {
   }
 
   nav {
-    background: #ff6a73;
-    position: relative;
+    background: $coral;
+    position: absolute;
+    width: 100%;
     ul {
       margin: 0em auto;
       padding: 0em 2em;
@@ -185,8 +181,7 @@ body#static_pages.index {
           text-align: center;
       }
       li {
-        // color: #481013;
-        color: #190609;
+        color: darken($dark-brown, 5%);
         font-size: 18px;
         font-weight: 700;
         display: inline-block;
@@ -217,8 +212,8 @@ body#static_pages.index {
     }
     &.sticky {
       position: fixed;
-      width: 100%;
       top: 0;
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.7);
     }
     &:after {
       @include clearfix;
@@ -227,7 +222,7 @@ body#static_pages.index {
 }
 
 footer {
-  background: #eb3b4c;
+  background: $coral;
   color: black;
   text-transform: uppercase;
   p {

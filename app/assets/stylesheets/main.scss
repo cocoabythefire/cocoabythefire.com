@@ -49,6 +49,33 @@ body#static_pages.index {
         word-spacing: -0.2em;
       }
     }
+    a.work {
+      color: $dark-brown;
+      position: absolute;
+      width: 120px;
+      top: 20px;
+      right: -110px;
+      background: $coral;
+      padding: 14px 110px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic;
+      border: 1px dotted $pale-green;
+      line-height: 1em;
+      font-size: 80%;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Safari and Chrome */
+      span {
+        display: block;
+        padding-top: 0.8em;
+        font-size: 80%;
+        font-style: normal;
+        color: $pale-green;
+      }
+    }
   }
 
   section.description {

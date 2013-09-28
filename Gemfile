@@ -44,6 +44,7 @@ gem 'puma', '~> 2.2.0'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails', '~> 3.0.1'
 gem 'haml-rails', '~> 0.4'
+gem 'google-analytics-rails', '~> 0.0.4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

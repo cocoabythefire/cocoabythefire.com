@@ -47,7 +47,7 @@ $(function () {
   })();
 
   var navigationActiveSection = (function() {
-    var name = 'story';
+    var items = $('nav li[data-section-target]');
 
     return {
       update: function(opts) {
@@ -55,14 +55,18 @@ $(function () {
         var scroll = opts.scroll || $(document).scrollTop();
         var scrollBottom = scroll + $(window).height();
 
-        var element = $('body#static_pages.index section.' + name);
-        console.log(scrollBottom + ' ' + element.offset().top);
-
-        // TODO: remove class active from everything
-        if (scrollBottom - 100 > element.offset().top) {
-          console.log('adding');
-          $('nav li.' + name + ' a').addClass('active');
-        }
+        items.find('a').removeClass('active');
+        $(items.get().reverse()).each(function() {
+          var name = $(this).attr('data-section-target');
+          var navItem = $(this);
+          var section = $('body#static_pages.index section.' + name);
+          if (section.length) {
+            if (scrollBottom - 100 > section.offset().top) {
+              navItem.find('a').addClass('active');
+              return false;
+            }
+          }
+        });
       }
     };
   })();

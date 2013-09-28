@@ -222,7 +222,7 @@ body#static_pages.index {
   }
 
   section.photos {
-    background: black image-url("dark.png");
+    background: $dark-brown;
     color: white;
     padding: 4em 6em;
     text-align: center;
@@ -330,5 +330,9 @@ footer {
     padding: 1em;
     text-align: center;
     font-size: 65%;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }

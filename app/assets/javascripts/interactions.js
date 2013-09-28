@@ -51,4 +51,10 @@ $(function () {
   $(window).resize(function() {
     stickyNavigation.update({ 'force': true });
   });
+
+  $('a[href^="#"]').click(function(event) {
+    event.preventDefault();
+    $('html,body').animate({ scrollTop: $(this.hash).offset().top}, 400);
+  });
 });
+

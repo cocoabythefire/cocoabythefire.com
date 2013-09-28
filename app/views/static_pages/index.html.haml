@@ -15,75 +15,142 @@
 %nav
   %ul
     %li Brittany Tarvin Young
-    %li Story
-    %li Art
-    %li Blog
-    %li Photos
-    %li Favs
-    %li Contact
+    %li
+      %a{ href: "#story" }
+        Story
+    %li
+      %a{ href: "http://cocoabythefire.tumblr.com/" }
+        Blog
+    %li
+      %a{ href: "#favs" }
+        Favs
+    %li
+      %a{ href: "#art" }
+        Art
+    -# %li Photos
+    %li
+      %a{ href: "#contact" }
+        Contact
 
-%section.story
+%section#story.story
   %h1 My Story
   %img{ src: image_path("me.jpg"), alt: "Personal Photo" }
   %p It all started in Cincinnati. A land of amazing ice cream, epic riverfront fireworks, chili cheese coneys, great sports teams, and genuinely nice people. I moved to Chicago in 2004 to attend engineering school at Northwestern University, and so far I haven't left. That's where I met my insanely amazing husband whose name rhymes with mine (I know - you don't have to say it). We have the world's best dog, a black and white Havanese named Milo.
   %p These days, I enjoy traveling, cooking, eating food that involves chocolate (extra dark), reading, writing, cuddling, and occasionally painting. That list changes though. Whenever people ask me whether I am a morning or night person I say neither because I hate waking up and I go to bed earlier than pretty much all of my friends. I don't own a car, don't like being in them, and generally hate to drive. Walking clears my head and biking or public transit are more efficient in the city. My idea of a good time is sharing yummy food and drinks with great people. Oh, and I take my hot cocoa fireside with homemade whipped cream AND marshmallows thank you very much!
 
-%section.favs
-  %h1 Favorites
+%section#favs.favs
+  %h1
+    Favorites
+    %a.pinterest{ href: "http://www.pinterest.com/cocoabythefire/" }
+      %img{ src: image_path("pinterest.png"), alt: "Pinterest" }
   %p I tend to be fairly opinionated. These are some favorite places, eats, and other finds.
+
   %ul
     %li
-      %strong Hot Chocolate
-      Laduree in Paris
-    %li
-      %strong Ice Cream
-      Graeter's Black Raspberry Chip
+      %strong Cocoa Beverage
+      Hot Chocolate at 
+      %a{ href: "http://www.laduree.com" }
+        Ladurée in Paris
+      is chocolatey heaven
     %li
       %strong Coffee
-      Intelligentsia, Stumptown Coffee Roasters, or anything Colombian (best enjoyed while in South America :)
+      %a{ href: "http://www.intelligentsiacoffee.com" }
+        Intelligentsia
+      or
+      %a{ href: "http://stumptowncoffee.com" }
+        Stumptown Coffee Roasters
     %li
       %strong Cocktail
-      A mezcal margarita w/ Forteleza Reposada tequila, fresh lime juice, Cointreau, and homemade simple syrup <em>or</em> the bourbon and butternut squash concoction I had at The Peasantry
+      A homemade mezcal margarita mixed up by my beau: Forteleza Reposada tequila, fresh lime juice, Cointreau, simple syrup
     %li
-      %strong Big Cities (US)
-      Chicago &gt; New York &gt; San Francisco &gt; Everywhere Else &gt; LA
+      %strong Dessert
+      %a{ href: "http://www.graeters.com/our-flavors-signature-chip" }
+        Graeter's Black Raspberry Chip ice cream
+      on top of a warm brownie, based Alaska style
     %li
-      %strong Non-US Destinations
-      London, Paris, Mexico, Buenos Aires
+      %strong Places (so far)
+      Chicago, London, Paris, Buenos Aires, Playa Del Carmen, San Francisco, NYC, Maui, Aspen, Seattle, Carmel (CA), Santa Barbara, Georgetown (DC)
     %li
       %strong Restaurants
-      Girl and the Goat, Frontera Grill, Xoco, Masa Azul
+      %a{ href: "http://www.girlandthegoat.com" }
+        Girl &amp; the Goat
+      , 
+      %a{ href: "https://www.rickbayless.com" }
+        Frontera Grill/Topolobampo/Xoco
+      , 
+      %a{ href: "http://www.masaazul.com" }
+        Masa Azul
+      , 
+      %a{ href: "http://www.amaya.biz" }
+        Amaya
+      , 
+      %a{ href: "http://reddnapavalley.com" }
+        Redd
+      , 
+      %a{ href: "http://www.craftrestaurantsinc.com/craft-new-york/" }
+        Craft
+      , 
+      %a{ href: "http://www.woodberrykitchen.com" }
+        Woodberry Kitchen
+    %li
+      %strong Books
+      Kite Runner, The Help, Hunger Games, Outliers, The Hobbit
+    %li
+      %strong Movies
+      Bourne Identity, Inception, Love Actually, The Matrix, Garden State
     %li
       %strong Wines
-      Malbecs, Syrahs, Cabernets, or Merlots from Mendoza, Argentina
-    %li
-      %strong Local Dish
-      A lobster roll <em>in</em> Maine
+      Malbecs and Syrahs from Mendoza, Argentina, or
+      %a{ href: "http://www.winesofchile.org/chilean-wine/varieties/primary-red-varieties/carmenere/" }
+        Carmenere from Chile
     %li
       %strong Season
       Autumn (somewhere where the trees change colors and the weather is crisp)
     %li
-      %strong Meal
-      Gourmet tacos of course!
+      %strong Local Dish
+      A lobster roll <em>in</em> Maine or <em>real</em> crabcakes in Baltimore
     %li
       %strong Beach
-      Lanikai Beach on Oahu, or the entire southern end of Maui
+      %a{ href: "http://www.travelchannel.com/interests/beaches/photos/top-10-hawaiian-beaches?page=5" }
+        Lanikai Beach on Oahu
+      or the entire southern end of Maui
 
-%section.art
+  %hr
+
+  %script{ src: "http://www.thisismyjam.com/includes/js/medallion.js" }
+  %script
+    Jam.Medallion.insert({"username":"cocoabythefire"});
+
+%section#art.art
   %h1 Art
   %p So, sometimes I paint. Oil painting in a modern/abstract style to be precise. I find it soothing and energizing at the same time. I also build my own canvases (and by "I" what I really mean is "my husband" because I cannot work a staple gun to save my life). Anyway, here are a few works that I have completed...
 
   %img{ src: image_path("red_painting.jpg"), alt: "Red Abstract" }
   %img{ src: image_path("green_painting.jpg"), alt: "Red Abstract" }
 
-%section.photos
-  %h1 Photos
-  %p Artistic snapshots of some memorable places and experiences - mostly taken by my endlessly talented husband.
+-# %section.photos
+-#   %h1 Photos
+-#   %p Artistic snapshots of some memorable places and experiences - mostly taken by my endlessly talented husband.
 
 
-%section.contact
+%section#contact.contact
   %h1 Contact
-  %p I'm on Twitter (sometimes), but the quickest way to get ahold of me would be email...
+  %p These are my usual social haunts&hellip;
+  %a{ href: "https://twitter.com/cocoabythefire" }
+    %img{ src: image_path("twitter.png"), alt: "Twitter" }
+  %a{ href: "http://instagram.com/cocoabythefire/" }
+    %img{ src: image_path("instagram.png"), alt: "Instagram" }
+  %a{ href: "http://www.pinterest.com/cocoabythefire/" }
+    %img{ src: image_path("pinterest.png"), alt: "Pinterest" }
+  %a{ href: "http://cocoabythefire.tumblr.com" }
+    %img{ src: image_path("tumblr.png"), alt: "Tumblr" }
+  -# %a{ href: "www.google.com" }
+  -#   %img{ src: image_path("skype.png"), alt: "Skype" }
+
+  %p
+    &hellip;or you can always just send me an
+    %a{ href: "mailto:brit@cocoabythefire.com" } email
+    =":)"
 
 %footer
-  %p The End :)
+  %p &copy; 2013 Cocoa by the Fire

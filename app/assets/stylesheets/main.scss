@@ -34,6 +34,8 @@ body#static_pages.index {
     background-size: 100% auto;
     background-size: cover;
     color: white;
+    overflow: hidden;
+    position: relative;
     h1 {
       font-family: 'Amaranth', sans-serif;
       font-size: 500%;
@@ -129,14 +131,29 @@ body#static_pages.index {
       text-transform: uppercase;
       letter-spacing: 0.2em;
     }
+    a {
+      text-decoration: inherit;
+      color: inherit;
+      &:hover {
+        color: $dark-coral;
+      }
+    }
+    a.pinterest {
+      vertical-align: middle;
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
     p {
-      padding-bottom: 2em;
+      padding-bottom: 1em;
     }
     ul {
       width: 80%;
       margin: 0px auto;
       padding: 0px;
       list-style: none;
+      font-size: 90%;
       li {
         float: left;
         padding: 0.7em 2em;
@@ -153,9 +170,38 @@ body#static_pages.index {
         }
         &:nth-of-type(odd) { clear: both; }
       }
+      &:after {
+        @include clearfix;
+      }
     }
-    &:after {
-      @include clearfix;
+    hr {
+      margin-top: 2em;
+      border: 0px;
+      border-top: 1px dotted rgba(0,0,0,0.4);
+    }
+    .jam-medallion {
+      margin-top: 2em;
+      display: inline-block;
+      margin-left: -75px;
+      p {
+        margin: 0.7em 0em 0em 0em;
+        padding: 0px;
+        text-align: left;
+        white-space: nowrap;
+      }
+      a {
+        text-decoration: none;
+        color: $coral;
+        display: block;
+        font-size: 90%;
+      }
+      img {
+        float: left;
+        margin-right: 1em;
+        border: 2px solid $dark-brown;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
     }
   }
 
@@ -187,13 +233,32 @@ body#static_pages.index {
   }
 
   section.contact {
-    background: $pale-green image-url("polyester.png");
+    background: darken($dark-brown, 5%);
     padding: 4em 6em;
     text-align: center;
-    color: $dark-brown;
+    color: white;
+    p {
+      font-weight: 200;
+      font-size: 95%;
+    }
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.2em;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      margin: 20px;
+      display: inline-block;
+      border: 4px solid rgba(255,255,255, 0);
+      border-radius: 50%;
+      &:hover {
+        border-color: rgba(255,255,255, 0.3);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $coral;
     }
   }
 
@@ -217,6 +282,13 @@ body#static_pages.index {
         line-height: 60px;
         text-transform: uppercase;
         opacity: 0.85;
+        a {
+          text-decoration: inherit;
+          color: inherit;
+          &:hover {
+            color: white;
+          }
+        }
         @include for-screens-less-than($screen-target-width-2) {
           font-size: 16px;
         }
@@ -251,11 +323,12 @@ body#static_pages.index {
 
 footer {
   background: $coral;
-  color: black;
+  color: $dark-brown;
   text-transform: uppercase;
   p {
     margin: 0;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
+    font-size: 65%;
   }
 }

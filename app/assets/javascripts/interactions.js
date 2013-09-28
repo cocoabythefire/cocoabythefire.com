@@ -4,8 +4,9 @@ $(function () {
     var header_bottom = header.offset().top + header.height();
 
     return {
-      update: function() {
-        var scroll = $(document).scrollTop();
+      update: function(opts) {
+        opts = opts || {};
+        var scroll = opts.scroll || $(document).scrollTop();
         if (scroll <= header_bottom) {
           var percentVisible = (header_bottom - scroll) / header_bottom;
           // y begins at 50% and increases a bit based on space available
@@ -24,8 +25,9 @@ $(function () {
 
     return {
       update: function(opts) {
-        var scroll = $(document).scrollTop();
-        var force = (opts || {}).force;
+        opts = opts || {};
+        var scroll = opts.scroll || $(document).scrollTop();
+        var force = opts.force;
 
         // for some reason the value of the offset wasn't right when calculated
         // before the first scroll event. this was seen in Safari 6.0.5 on OS
@@ -44,9 +46,32 @@ $(function () {
     };
   })();
 
+  var navigationActiveSection = (function() {
+    var name = 'story';
+
+    return {
+      update: function(opts) {
+        opts = opts || {};
+        var scroll = opts.scroll || $(document).scrollTop();
+        var scrollBottom = scroll + $(window).height();
+
+        var element = $('body#static_pages.index section.' + name);
+        console.log(scrollBottom + ' ' + element.offset().top);
+
+        // TODO: remove class active from everything
+        if (scrollBottom - 100 > element.offset().top) {
+          console.log('adding');
+          $('nav li.' + name + ' a').addClass('active');
+        }
+      }
+    };
+  })();
+
   $(document).scroll(function(event) {
-    parallax.update();
-    stickyNavigation.update();
+    var scroll = $(document).scrollTop();
+    parallax.update({ 'scroll': scroll });
+    stickyNavigation.update({ 'scroll': scroll });
+    navigationActiveSection.update({ 'scroll': scroll });
   });
   $(window).resize(function() {
     stickyNavigation.update({ 'force': true });

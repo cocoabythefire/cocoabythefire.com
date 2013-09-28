@@ -285,7 +285,7 @@ body#static_pages.index {
         a {
           text-decoration: inherit;
           color: inherit;
-          &:hover {
+          &:hover, &.active {
             color: white;
           }
         }

@@ -41,7 +41,21 @@ body#static_pages.professional {
   section.contact a {
     color: $turquoise;
   }
-  section.work {
+  section.talks {
+    ul {
+      list-style: none;
+      line-height: 1.75em;
+    }
+    a {
+      text-decoration: none;
+      color: darken($turquoise, 10%);
+      font-weight: 600;
+    }
+    h2 {
+      padding-top: 1.5em;
+    }
+  }
+  section.outreach {
     background: $pale-green image-url("polyester.png");
     padding: 4em 6em;
     text-align: center;
@@ -49,6 +63,34 @@ body#static_pages.professional {
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.2em;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: darken($turquoise, 10%);
+    }
+    sup {
+      font-size: 70%;
+      color: lighten($dark-brown, 40%);
+    }
+    img {
+      width: 90px;
+      float: left;
+      margin-right: 0.75em;
+    }
+    p {
+      &.gdi {
+        text-align: left;
+        display: inline-block;
+        width: 300px;
+        a {
+          display: block;
+        }
+      }
+    }
+    @include for-screens-less-than($screen-target-width-1) {
+      font-size: 90%;
+      padding: 4em 2em;
     }
   }
   footer {
@@ -283,6 +325,7 @@ body#static_pages {
   }
 
   section.art, section.talks {
+    color: $dark-brown;
     background: white image-url("dots.png");;
     padding: 4em 6em;
     text-align: center;

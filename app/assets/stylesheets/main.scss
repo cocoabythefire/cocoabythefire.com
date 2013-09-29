@@ -38,6 +38,13 @@ body#static_pages.professional {
   section.header a.flip {
     background: $turquoise;
   }
+  section.bio a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: $turquoise;
+    }
+  }
   section.contact a {
     color: $turquoise;
   }

@@ -1,0 +1,73 @@
+%section.header
+  %h1
+    Cocoa
+    %span by the
+    Fire
+  %a.flip{ href: root_path }
+    Learn More
+    %span my personal side &rarr;
+
+%section.description
+  %h1 Bio
+  %p Hi, I'm Brit. I pursue creativity and innovation through technology.
+  %p Feel free to peruse my collection of most recent projects and ramblings.
+
+%nav
+  %ul
+    %li Brittany Tarvin Young
+    %li{ data: { 'section-target' => 'bio' } }
+      %a{ href: "#bio" }
+        Bio
+    %li{ data: { 'section-target' => 'blog' } }
+      %a{ href: "http://brittanytarvin.tumblr.com/" }
+        Blog
+    %li{ data: { 'section-target' => 'work' } }
+      %a{ href: "#work" }
+        Work
+    %li{ data: { 'section-target' => 'talks' } }
+      %a{ href: "#talks" }
+        Talks
+    %li{ data: { 'section-target' => 'outreach' } }
+      %a{ href: "#outreach" }
+        Outreach
+    %li{ data: { 'section-target' => 'contact' } }
+      %a{ href: "#contact" }
+        Contact
+
+%section#bio.bio
+  %h1 My Bio
+  %img{ src: image_path("me.jpg"), alt: "Personal Photo" }
+  %p It all started in Cincinnati. A land of amazing ice cream, epic riverfront fireworks, chili cheese coneys, great sports teams, and genuinely nice people. I moved to Chicago in 2004 to attend engineering school at Northwestern University, and so far I haven't left. That's where I met my insanely amazing husband whose name rhymes with mine (I know - you don't have to say it). We have the world's best dog, a black and white Havanese named Milo.
+
+%section#work.work
+  %h1 My Work
+  %p So, sometimes I work.
+
+%section#talks.talks
+  %h1 Speaking
+  %p So, sometimes I speak.
+
+%section#contact.contact
+  %h1 Contact
+  %p These are my usual social haunts&hellip;
+  %a{ href: "https://twitter.com/brittanytarvin" }
+    %img{ src: image_path("twitter.png"), alt: "Twitter" }
+  %a{ href: "http://linkedin.com/brittanytarvin/" }
+    %img{ src: image_path("linkedin.png"), alt: "LinkedIn" }
+  %a{ href: "http://www.pinterest.com/cocoabythefire/" }
+    %img{ src: image_path("pinterest.png"), alt: "Pinterest" }
+  %a{ href: "http://brittanytarvin.tumblr.com" }
+    %img{ src: image_path("tumblr.png"), alt: "Tumblr" }
+  -# %a{ href: "www.google.com" }
+  -#   %img{ src: image_path("skype.png"), alt: "Skype" }
+
+  %p
+    &hellip;or you can always just send me an
+    %a{ href: "mailto:brit@cocoabythefire.com" } email
+    =":)"
+
+%footer
+  %p
+    &copy; 2013 Brittany Tarvin Young, header image by
+    %a{ href: "http://www.flickr.com/photos/striatic/112098447/" }
+      striatic

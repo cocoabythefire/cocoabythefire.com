@@ -17,6 +17,46 @@ body {
 }
 
 body#static_pages.index {
+  nav {
+    background: $coral;
+  }
+  section.header a.flip {
+    background: $coral;
+  }
+  section.contact a {
+    color: $coral;
+  }
+  footer {
+    background: $coral;
+  }
+}
+
+body#static_pages.professional {
+  nav {
+    background: $turquoise;
+  }
+  section.header a.flip {
+    background: $turquoise;
+  }
+  section.contact a {
+    color: $turquoise;
+  }
+  section.work {
+    background: $pale-green image-url("polyester.png");
+    padding: 4em 6em;
+    text-align: center;
+    color: $dark-brown;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  }
+  footer {
+    background: $turquoise;
+  }
+}
+
+body#static_pages {
   & > section {
     h1 {
       margin: 0;
@@ -51,7 +91,7 @@ body#static_pages.index {
         word-spacing: -0.2em;
       }
     }
-    a.work {
+    a.flip {
       color: $dark-brown;
       position: absolute;
       width: 120px;
@@ -105,7 +145,7 @@ body#static_pages.index {
     }
   }
 
-  section.story {
+  section.story, section.bio {
     background: darken($dark-brown, 5%);
     color: white;
     padding: 7em 6em 4em 6em;
@@ -242,7 +282,7 @@ body#static_pages.index {
     }
   }
 
-  section.art {
+  section.art, section.talks {
     background: white image-url("dots.png");;
     padding: 4em 6em;
     text-align: center;
@@ -304,7 +344,6 @@ body#static_pages.index {
     }
     a {
       text-decoration: none;
-      color: $coral;
     }
     @include for-screens-less-than($screen-target-width-1) {
       font-size: 90%;
@@ -313,7 +352,6 @@ body#static_pages.index {
   }
 
   nav {
-    background: $coral;
     position: absolute;
     width: 100%;
     ul {
@@ -384,7 +422,6 @@ body#static_pages.index {
 }
 
 footer {
-  background: $coral;
   color: $dark-brown;
   text-transform: uppercase;
   p {

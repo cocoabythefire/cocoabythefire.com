@@ -1,6 +1,6 @@
 $(function () {
   var parallax = (function() {
-    var header = $('body#static_pages.index section.header');
+    var header = $('body#static_pages section.header');
     var header_bottom = header.offset().top + header.height();
 
     return {
@@ -20,7 +20,7 @@ $(function () {
   })();
 
   var stickyNavigation = (function() {
-    var nav = $('body#static_pages.index nav');
+    var nav = $('body#static_pages nav');
     var navTop = null;
 
     return {
@@ -63,7 +63,7 @@ $(function () {
           sectionTops = [];
           items.each(function() {
             var name = $(this).attr('data-section-target');
-            var section = $('body#static_pages.index section.' + name);
+            var section = $('body#static_pages section.' + name);
             sectionTops.push(section.length ? section.offset().top : undefined);
           });
         }

@@ -318,6 +318,13 @@ body#static_pages.index {
     &:after {
       @include clearfix;
     }
+    @include for-screens-less-than($screen-target-width-1) {
+      &.sticky {
+        position: absolute;
+        top: auto;
+        box-shadow: none;
+      }
+    }
   }
 }
 

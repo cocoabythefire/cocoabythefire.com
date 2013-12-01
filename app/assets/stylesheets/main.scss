@@ -7,6 +7,7 @@ $coral: #FF5559;
 $dark-coral: #D42438;
 $turquoise: #60BAA4;
 $pale-green: #FAF2B7;
+$light-gray: #A5A5A5;
 
 // TODO: remove unused fonts
 
@@ -28,58 +29,6 @@ body#static_pages.index {
   }
   footer {
     background: $coral;
-  }
-
-  section.blog {
-    background: darken($dark-brown, 5%);
-    color: white;
-    padding: 4em 6em;
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-    article {
-      padding: 3em 0em 1em 0em;
-      margin-top: 2em;
-      border: 0px;
-      border-top: 1px dotted rgba(255,255,255,0.5);
-
-      &:last-of-type {
-        padding-bottom: 3em;
-        border-bottom: 1px dotted rgba(255,255,255,0.5);
-      }
-    }
-    article > .title {
-      text-align: left;
-      font-size: 120%;
-      display: block;
-      padding-bottom: 0.5em;
-    }
-    article > .date {
-      display: block;
-      float: left;
-      padding-right: 3em;
-      font-weight: 600;
-      opacity: 0.6;
-    }
-    article > .body {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-      * {
-        margin: 0px !important;
-        padding: 0px !important;
-        line-height: 1em !important;
-        font-weight: 400 !important;
-        font-style: normal !important;
-        display: inline !important;
-      }
-      img, br, strong { display: none !important; }
-    }
-    article : las{
-    }
   }
 }
 
@@ -406,6 +355,68 @@ body#static_pages {
     @include for-screens-less-than($screen-target-width-1) {
       font-size: 90%;
       padding: 4em 2em;
+    }
+  }
+
+  section.blog {
+    background: darken($dark-brown, 5%);
+    color: white;
+    padding: 4em 6em;
+    h1, .more {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    a {
+      text-decoration: inherit;
+      color: inherit;
+      &:hover {
+        color: $pale-green;
+      }
+    }
+    .more {
+      color: $turquoise;
+      padding-top: 2em;
+    }
+    article {
+      padding: 3em 0em 1em 0em;
+      margin-top: 2em;
+      border: 0px;
+      border-top: 1px dotted rgba(255,255,255,0.5);
+
+      &:last-of-type {
+        padding-bottom: 3em;
+        border-bottom: 1px dotted rgba(255,255,255,0.5);
+      }
+    }
+    article > .title {
+      text-align: left;
+      font-size: 110%;
+      display: block;
+      padding-bottom: 0.5em;
+      color: $turquoise;
+    }
+    article > .date {
+      display: block;
+      float: left;
+      padding-right: 3em;
+      font-weight: 600;
+      color: $light-gray;
+    }
+    article > .body {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      * {
+        margin: 0px !important;
+        padding: 0px !important;
+        line-height: 1em !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        display: inline !important;
+      }
+      img, br, strong { display: none !important; }
     }
   }
 

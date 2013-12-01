@@ -17,13 +17,13 @@
     %li Brittany Tarvin Young
     %li{ data: { 'section-target' => 'bio' } }
       %a{ href: "#bio" }
-        Bio
-    %li{ data: { 'section-target' => 'blog' } }
-      %a{ href: "http://brittanytarvin.tumblr.com/" }
-        Blog
+        About
     %li{ data: { 'section-target' => 'outreach' } }
       %a{ href: "#outreach" }
         Outreach
+    %li{ data: { 'section-target' => 'blog' } }
+      %a{ href: "#blog" }
+        Blog
     %li{ data: { 'section-target' => 'talks' } }
       %a{ href: "#talks" }
         Talks
@@ -32,7 +32,7 @@
         Contact
 
 %section#bio.bio
-  %h1 My Bio
+  %h1 About Me
   %img{ src: image_path("me.jpg"), alt: "Personal Photo" }
   %p
     For as long as I can remember I have marveled at the power of technological innovation to improve, transform, and delight the world. Most recently, I've been particularly drawn to computers; working to build intelligently designed and functional software. In my professional career this has translated into tackling everyday issues through the use of an industrial engineering mindset (i.e. efficiency, optimization, and system organization) and a generous dose of creativity. In 2009 I co-founded 
@@ -74,6 +74,9 @@
     <i>Interested in getting involved?</i>
     %a{ href: "mailto:brittany@girldevelopit.com" }
       Feel free to reach out!
+
+%section#blog.blog{ data: { tumblr: 'brittanytarvin' } }
+  %h1 Recent Ramblings
 
 %section#talks.talks
   %h1 Speaking

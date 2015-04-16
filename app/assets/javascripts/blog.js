@@ -10,22 +10,32 @@ $(function () {
     $.ajax(tumblr.requstURL, { 'dataType': 'jsonp' }).done(function(data) {
       var posts = data && data.response && data.response.posts;
       var first_three = posts.slice(0,3);
-      console.log(first_three);
-      $.each(first_three, function(i, l) {
+      $.each(first_three, function(i, post) {
         var article = $('<article/>');
         var title = $('<h1/>').addClass('title');
-        var post_url = $('<a href=' + l['post_url'] + '/>');
+        var postAnchor = $('<a/>').attr({ href: post['post_url'] });
         var date = $('<p/>').addClass('date');
         var body = $('<div/>').addClass('body');
-        var full_date = new Date(l['timestamp'] * 1000);
+        var full_date = new Date(post.timestamp * 1000);
         var month = full_date.getMonth() + 1;
         var day = full_date.getDate();
         var year = full_date.getFullYear().toString().substring(2, 4);
         var pretty_date = month + '.' + day + '.' + year;
-        post_url.append(l['title']);
-        title.append(post_url);
+        var titleText = post.title;
+        var bodyHTML = post.body;
+
+        if (post.type === 'photo') {
+          // put the post caption into a container div so we can pull out
+          // the specific things that we want.
+          var container = $('<div/>');
+          container.append(post.caption);
+          titleText = container.find('h2').text();
+          bodyHTML = container.find('p').html();
+        }
+        postAnchor.append(titleText);
+        title.append(postAnchor);
         date.append(pretty_date);
-        body.append(l['body']);
+        body.append(bodyHTML);
         article.append(date);
         article.append(title);
         article.append(body);

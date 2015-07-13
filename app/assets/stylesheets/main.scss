@@ -17,7 +17,7 @@ body {
   font-size: 110%;
 }
 
-body#static_pages.index {
+body#static_pages.personal {
   nav {
     background: $coral;
   }
@@ -32,7 +32,7 @@ body#static_pages.index {
   }
 }
 
-body#static_pages.professional {
+body#static_pages.index {
   nav {
     background: $turquoise;
   }
@@ -63,6 +63,21 @@ body#static_pages.professional {
       padding-top: 1.5em;
     }
   }
+  section.tech {
+    background: $pale-green image-url("polyester.png");
+    padding: 4em 6em;
+    text-align: center;
+    color: $dark-brown;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    ul {
+      list-style: none;
+      line-height: 1.75em;
+      font-weight: 600;
+    }
+  }
   section.outreach {
     background: $pale-green image-url("polyester.png");
     padding: 4em 6em;
@@ -82,7 +97,7 @@ body#static_pages.professional {
       color: lighten($dark-brown, 40%);
     }
     img {
-      width: 90px;
+      width: 150px;
       float: left;
       margin-right: 0.75em;
     }
@@ -90,7 +105,15 @@ body#static_pages.professional {
       &.gdi {
         text-align: left;
         display: inline-block;
-        width: 300px;
+        width: 400px;
+        a {
+          display: block;
+        }
+      }
+      &.ac4g {
+        text-align: left;
+        display: inline-block;
+        width: 400px;
         a {
           display: block;
         }

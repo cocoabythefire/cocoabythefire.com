@@ -4,7 +4,7 @@ CocoaByTheFire::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
-  get 'professional/' => 'static_pages#professional'
+  get 'personal/' => 'static_pages#personal'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

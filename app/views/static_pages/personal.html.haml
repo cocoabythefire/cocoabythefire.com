@@ -1,0 +1,152 @@
+%section.header
+  %h1
+    Cocoa
+    %span by the
+    Fire
+  %a.flip{ href: root_path }
+    Strictly Business?
+    %span Head over here &rarr;
+
+%section.description
+  %h1 About Me
+  %p Hi, I'm Brit. I like to sip hot cocoa by the fire on cool evenings.
+  %p Feel free to peruse my collection of artistic endeavors, ramblings, and sweet cravings.
+
+%nav
+  %ul
+    %li Brittany Tarvin Young
+    %li{ data: { 'section-target' => 'story' } }
+      %a{ href: "#story" }
+        Story
+    %li{ data: { 'section-target' => 'favs' } }
+      %a{ href: "#favs" }
+        Favs
+    %li{ data: { 'section-target' => 'art' } }
+      %a{ href: "#art" }
+        Art
+    -# %li Photos
+    %li{ data: { 'section-target' => 'contact' } }
+      %a{ href: "#contact" }
+        Contact
+
+%section#story.story
+  %h1 My Story
+  %img{ src: image_path("me.jpg"), alt: "Personal Photo" }
+  %p It all started in Cincinnati. A land of amazing ice cream, epic riverfront fireworks, chili cheese coneys, great sports teams, and genuinely nice people. I moved to Chicago in 2004 to attend engineering school at Northwestern University, and ended up staying for nearly a decade.
+  %p These days, you can find me in Portland, Oregon where I live with my amazing husband and fluffy Havanese. I enjoy exploring the outdoors, traveling, cooking, eating chocolate (extra dark), reading, writing, and occasionally painting. That list changes though. Whenever people ask me whether I am a morning or night person I have to say neither because I hate waking up and I go to bed earlier than all my friends. Oh, and most importantly, I take my hot cocoa fireside with whipped cream AND marshmallows!
+
+%section#favs.favs
+  %h1
+    Favorites
+    %a.pinterest{ href: "http://www.pinterest.com/cocoabythefire/" }
+      %img{ src: image_path("pinterest.png"), alt: "Pinterest" }
+  %p I tend to be fairly opinionated. These are some favorite places, eats, and other finds.
+
+  %ul
+    %li
+      %strong Cocoa Beverage
+      Hot Chocolat at 
+      %a{ href: "http://www.laduree.com" }
+        Ladurée in Paris
+      is chocolatey heaven
+    %li
+      %strong Coffee
+      %a{ href: "http://coavacoffee.com" }
+        Coava Coffee
+      or
+      %a{ href: "http://stumptowncoffee.com" }
+        Stumptown Coffee Roasters
+    %li
+      %strong Cocktail
+      A homemade mezcal margarita w/Forteleza Reposada, fresh lime juice, Cointreau, and simple syrup
+    %li
+      %strong Dessert
+      %a{ href: "http://www.graeters.com/our-flavors-signature-chip" }
+        Graeter's Black Raspberry Chip ice cream
+      on top of a warm brownie, baked Alaska style
+    %li
+      %strong Places (so far)
+      Portland, Chicago, London, Paris, Mendoza, Playa del Carmen, San Francisco, Napa, NYC, Maui, Aspen, Seattle, Carmel (CA), Santa Barbara, DC, Park City (UT)
+    %li
+      %strong Restaurants
+      %a{ href: "http://www.girlandthegoat.com" }
+        Girl &amp; the Goat
+      , 
+      %a{ href: "https://www.rickbayless.com" }
+        Frontera Grill/Topolobampo/Xoco
+      , 
+      %a{ href: "http://www.masaazul.com" }
+        Masa Azul
+      , 
+      %a{ href: "http://www.amaya.biz" }
+        Amaya
+      , 
+      %a{ href: "http://reddnapavalley.com" }
+        Redd
+      , 
+      %a{ href: "http://www.craftrestaurantsinc.com/craft-new-york/" }
+        Craft
+      , 
+      %a{ href: "http://www.woodberrykitchen.com" }
+        Woodberry Kitchen
+    %li
+      %strong Wines
+      Malbecs and Syrahs from Mendoza, Argentina, or
+      %a{ href: "http://www.winesofchile.org/chilean-wine/varieties/primary-red-varieties/carmenere/" }
+        Carmenere from Chile
+    %li
+      %strong Season
+      Autumn (anywhere the trees change colors and the weather is crisp)
+    %li
+      %strong Local Dish
+      A lobster roll <em>in</em> Maine or <em>real</em> crabcakes in Baltimore
+    %li
+      %strong Beach
+      %a{ href: "http://www.travelchannel.com/interests/beaches/photos/top-10-hawaiian-beaches?page=5" }
+        Lanikai Beach on Oahu
+      or the entire southern end of Maui
+  %hr
+
+  %script{ src: "http://www.thisismyjam.com/includes/js/medallion.js" }
+  %script
+    Jam.Medallion.insert({"username":"cocoabythefire"});
+
+%section#art.art
+  %h1 Art
+  %p So, sometimes I paint. Oil painting in a modern/abstract style to be precise. I find it soothing and energizing at the same time. I also build my own canvases (and by "I" what I really mean is "my husband" because I am not a fan of staple guns). Anyway, here are a few works that I have completed...
+
+  %img{ src: image_path("red_painting.jpg"), alt: "Red Abstract" }
+  %img{ src: image_path("green_painting.jpg"), alt: "Red Abstract" }
+
+-# %section.photos
+-#   %h1 Photos
+-#   %p Artistic snapshots of some memorable places and experiences - mostly taken by my endlessly talented husband.
+
+
+
+
+
+%section#contact.contact
+  %h1 Contact
+  %p These are my usual social haunts&hellip;
+  %a{ href: "https://twitter.com/cocoabythefire" }
+    %img{ src: image_path("twitter.png"), alt: "Twitter" }
+  %a{ href: "http://instagram.com/cocoabythefire/" }
+    %img{ src: image_path("instagram.png"), alt: "Instagram" }
+  %a{ href: "http://www.pinterest.com/cocoabythefire/" }
+    %img{ src: image_path("pinterest.png"), alt: "Pinterest" }
+  %a{ href: "http://cocoabythefire.tumblr.com" }
+    %img{ src: image_path("tumblr.png"), alt: "Tumblr" }
+  -# %a{ href: "www.google.com" }
+  -#   %img{ src: image_path("skype.png"), alt: "Skype" }
+
+  %p
+    &hellip;or you can always just send me an
+    %a{ href: "mailto:brit@cocoabythefire.com" } email
+    =":)"
+
+%footer
+  %p
+    &copy; 2015 Brittany Tarvin Young, header image by
+    %a{ href: "http://www.flickr.com/photos/striatic/112098447/" }
+      striatic
